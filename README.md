@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://malsopp.github.io/pui-homework-template-malsopp/
 
-Repository link: `add the URL to this repository`
+Repository link: https://github.com/Malsopp/pui-homework-template-malsopp
