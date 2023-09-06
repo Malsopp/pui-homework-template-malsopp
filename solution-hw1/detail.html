@@ -6,58 +6,64 @@
     <title>Bun Bun Bake Shop</title>
     <link rel="stylesheet" href="./styles.css"
   </head>
- 
   <body>
 
     <header>
       <a href="./index.html">
         <img src="../assets/logo/logo-01.svg"/ alt="Bun Bun Logo" class="logo">
       </a>
-      <hr class="hr.header">
+      <hr class="hr_header">
 
-      <nav>
-        <ul>
-          <li><a href="./index.html">PRODUCTS</a></li>
-          <li><a href="./cart.html">CART</a></li>
-        </ul>
+      <nav class="header">
+        <p class="header_highlight"><a href="./index.html" class="headerlink">PRODUCTS</a></p>
+        <p><a href="./cart.html" class="headerlink">CART</a></p>
       </nav>
-
     </header>
 
+    <main> 
+      <section id="detail_content">
 
-    <div class="detail_content">
-      <div>
-        <h1> Original Cinnamon Roll</h1>
-        <img src="../assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll" class="img_border_detail"/>
-        <figcaption>Customize our delicious, hand-made cinammon roll to your liking! </figcaption>
+          <div>
+            <h1> Original Cinnamon Roll</h1>
+            <img src="../assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll" class="img_border_detail" width="600" />
+            <p id="customize_caption">Customize our delicious, hand-made cinammon roll to your liking! </p>
 
-        <br>
+            <br>
 
-        <label for="glazing"> Glazing: </label>
-        <br>
-        <select name="Glazing" id="Glazing">
-          <option value="Keep original">Keep original</option>
-          <option value="Sugar milk">Sugar milk</option>
-          <option value="Vanilla milk">Vanilla milk</option>
-          <option value="Double chocolate">Double chocolate</option>
-        </select>
+            <div id="customizations">
 
-        <br>
+              <div id="glazing_customization"> 
+                <label for="glazing"> Glazing: </label>
+                <br>
+                <select name="Glazing" id="Glazing">
+                  <option value="Keep original">Keep original</option>
+                  <option value="Sugar milk">Sugar milk</option>
+                  <option value="Vanilla milk">Vanilla milk</option>
+                  <option value="Double chocolate">Double chocolate</option>
+                </select>
+              </div>  
+            
+            <br>
 
-        <label for="packSize"> Pack size: </label>
-        <br>
-        <select name="packSize" id="packSize">
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
+            <div id="packing_customization">
+                <label for="packSize"> Pack size: </label>
+                <br>
+                <select name="packSize" id="packSize">
+                  <option value="1">1</option>
+                  <option value="3">3</option>
+                  <option value="6">6</option>
+                  <option value="12">12</option>
+                </select>
+            </div>
 
-        <p>$2.49 <button>Add to Cart</button> </p>
-      </div>
-    </div>
-    
-  </body>
+            <p class="indvPrice">$2.49<button class="addtoCart"> Add to Cart</button> </p>
 
+            </div>
+          </div>
+
+      </section>
+  </main>
+
+</body>
 </html>
 
