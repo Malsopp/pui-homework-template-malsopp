@@ -118,6 +118,12 @@ button {
     justify-content: center;
 }
 
+/* This formats the content of all the information in the main section of the Product page.*/
+#product_content {
+    display: flex;
+    justify-content: center;
+}
+
 /* This formats the content of all the information in the main section of the Cart page.*/
 #cart_content {
     display: flex;
