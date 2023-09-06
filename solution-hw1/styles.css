@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
 /* This formats the link of the content formatted with anchor elements. */ 
@@ -72,7 +72,7 @@ button {
 
 /* This formats the border of the products images on the Detail page */ 
 .img_border_detail {
-    display: inline-block
+    display: inline-block;
     width: 600px;
     border: solid 3px;
     border-color: black;
@@ -112,16 +112,19 @@ button {
 }
 
 
+/* This formats the content of all the information in the main section of the Product Details page.*/
 #detail_content {
     display: flex;
     justify-content: center;
 }
 
+/* This formats the content of all the information in the main section of the Cart page.*/
 #cart_content {
     display: flex;
     justify-content: center;
 }
 
+/* This formats the customization caption of the image on the Details page. It aligns with the image*/
 #customize_caption {
     width: 400px;
     text-align: center;
@@ -129,18 +132,21 @@ button {
     margin: 0 auto;
 }
 
+/* This formats the content of the grouped div of the glazing and packing customizations on the details page*/
 #customizations {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* This formats the content of the checkout div on the Cart page*/
 #checkout{
     text-align: center;
     margin: 0 auto;
     display: block;
 }
 
+/* This formats the content of the checkout on the Cart page by providing padding to the final element on the page. */
 .totalprice{
     padding: 20px;
 }
