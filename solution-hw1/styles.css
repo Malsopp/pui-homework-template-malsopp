@@ -1,111 +1,135 @@
-body{
+body {
     font-family: sans-serif
 }
 
-p, h1{
+/* This formats the link of the content formatted with anchor elements. */ 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* This formats the overall paragraph and primary header content of the html. */ 
+p, h1 {
     text-align: center;
     text-decoration: none;
+    color: black;
+    display: block;
+    margin: 0 auto;
 }
 
-button{
+/* This formats the buttons */ 
+button {
     background-color: yellow;
     font-weight: bold;
-
 }
-
-.logo{
+/* This formats the width of the Bun BUn Bake Shop logo. */ 
+.logo {
     width: 400px;
 }
 
-.hr_header{
-    border: solid 2px;
+/* This formats the horizontal rule on the HTML page used to separate the logo from the header */ 
+.hr_header {
+    border: solid 1px;
 }
 
-.header{
-    border-top:1px;
+/* This formats the header on the page consisting of the products and cart link */ 
+.header {
+    border-top: 1px;
     text-align: center;
     font-weight: bold;
     text-decoration: none;
+    padding: 20px
 }
 
+/* This allows for the specfic "product" or "cart" at the top of the header to be highlighted depending on the page */ 
 .header_highlight {
     background-color: yellow;
     display: inline;
     text-decoration: none;
 }
 
+/* This formats the shared styling of the "product" and "cart" links at the top of the page */ 
 .headerlink {
     text-decoration: none;
 }
 
+/* This pads and separates each individual menu item on the Product Display page.*/ 
 .listing {
     padding: 10px 10px 10px 10px;
-
 }
-.listing:hover{
+
+/* When the cursor is over a specific item on the Product Display page, this causes the product to highlight in yellow*/ 
+.listing:hover {
     background-color: yellow;
 }
 
-.img_border_product{
+/* This formats the border of the products images on the Display page */ 
+.img_border_product {
     width: 400px;
-    border: solid 4px;
+    border: solid 3px;
     border-color: black;
 }
 
-.img_border_detail{
+/* This formats the border of the products images on the Detail page */ 
+.img_border_detail {
     display: inline-block
     width: 600px;
-    border: solid 4px;
+    border: solid 3px;
     border-color: black;
 }
 
-.img_border_cart{
-    width:200px;
-    border: solid 4px;
+/* This formats the border of the products images on the Cart page */ 
+.img_border_cart {
+    width: 200px;
+    border: solid 3px;
     border-color: black;
 }
 
-.product_description{
+/* This formats the description of the cinnamon rolls on the Display page. */
+.product_description {
     text-align: left;
+    text-decoration: underline;
 }
 
-.product_description:hover{
+/* This formats the script of the product description when the cursor is placed over it */
+.product_description:hover {
     font-weight: bold;
 }
 
-.notBold {
+/* This formats the script of the price of the products on the Display page.*/
+.price {
     font-weight: normal;
+    text-decoration: none;
+    text-align: left;
 }
+
+/* This formats the script of the remove button on the Carts page.*/
 .remove{
     font-size: smaller;
     text-decoration: underline;
     font-weight: bold;
+    margin-top: 1px;
 }
 
-#product_content{
-    display:flex;
+
+#detail_content {
+    display: flex;
     justify-content: center;
 }
 
-#detail_content{
-    display:flex;
+#cart_content {
+    display: flex;
     justify-content: center;
 }
 
-#cart_content{
-    display:flex;
-    justify-content: center;
-}
-
-#customize_caption{
+#customize_caption {
     width: 400px;
     text-align: center;
     display: block;
     margin: 0 auto;
-
 }
 
-#customizations{
+#customizations {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -117,4 +141,7 @@ button{
     display: block;
 }
 
+.totalprice{
+    padding: 20px;
+}
 
