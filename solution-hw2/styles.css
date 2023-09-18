@@ -1,0 +1,174 @@
+body {
+    font-family: sans-serif;
+}
+
+/* This formats the link of the content formatted with anchor elements. */ 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* This formats the overall paragraph and primary header content of the html. */ 
+p, h1 {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 0 auto;
+}
+
+/* This formats the buttons */ 
+button {
+    background-color: yellow;
+    font-weight: bold;
+}
+/* This formats the width of the Bun BUn Bake Shop logo. */ 
+.logo {
+    width: 400px;
+    flex: 1;
+}
+
+.navcolumn{
+    flex: 1;
+    text-align: right;
+}
+/* This formats the horizontal rule on the HTML page used to separate the logo from the header */ 
+.hr_header {
+    border: solid 1px;
+}
+
+/* This formats the header on the page consisting of the products and cart link */ 
+.header {
+    border-top: 1px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* This allows for the specfic "product" or "cart" at the top of the header to be highlighted depending on the page */ 
+.header_highlight {
+    background-color: yellow;
+    display: inline;
+    text-decoration: none;
+}
+
+/* This formats the shared styling of the "product" and "cart" links at the top of the page */ 
+.headerlink {
+    text-decoration: none;
+}
+
+/* This pads and separates each individual menu item on the Product Display page.*/ 
+.listing {
+    padding: 10px 10px 10px 10px;
+}
+
+/* When the cursor is over a specific item on the Product Display page, this causes the product to highlight in yellow*/ 
+.listing:hover {
+    background-color: yellow;
+}
+
+/* This formats the border of the products images on the Display page */ 
+.img_border_product {
+    width: 400px;
+    border: solid 3px;
+    border-color: black;
+}
+
+/* This formats the border of the products images on the Detail page */ 
+.img_border_detail {
+    display: inline-block;
+    width: 600px;
+    border: solid 3px;
+    border-color: black;
+}
+
+/* This formats the border of the products images on the Cart page */ 
+.img_border_cart {
+    width: 200px;
+    border: solid 3px;
+    border-color: black;
+}
+
+/* This formats the description of the cinnamon rolls on the Display page. */
+.product_description {
+    text-align: left;
+    text-decoration: underline;
+}
+
+/* This formats the script of the product description when the cursor is placed over it */
+.product_description:hover {
+    font-weight: bold;
+}
+
+/* This formats the script of the price of the products on the Display page.*/
+.price {
+    font-weight: normal;
+    text-decoration: none;
+    text-align: left;
+}
+
+/* This formats the script of the remove button on the Carts page.*/
+.remove{
+    font-size: smaller;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.rowone{
+    display: flex;
+}
+
+.rowtwo{
+    display: flex;
+}
+
+/* This formats the content of all the information in the main section of the Product Details page.*/
+#detail_content {
+    display: flex;
+    justify-content: center;
+}
+
+/* This formats the content of all the information in the main section of the Product page.*/
+#product_content {
+    display: flex;
+    justify-content: center;
+}
+
+/* This formats the content of all the information in the main section of the Cart page.*/
+#cart_content {
+    display: flex;
+    justify-content: center;
+}
+
+/* This formats the customization caption of the image on the Details page. It aligns with the image*/
+#customize_caption {
+    width: 400px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* This formats the content of the grouped div of the glazing and packing customizations on the details page*/
+#customizations {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* This formats the content of the checkout div on the Cart page*/
+#checkout{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+/* This formats the content of the checkout on the Cart page by providing padding to the final element on the page. */
+.totalprice{
+    padding: 20px;
+}
+

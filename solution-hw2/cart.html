@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mikayla Alsopp">
+    <title>Bun Bun Bake Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+ 
+  <body>
+
+<!-- This is the header which is at the top of the page. It includes the Bun Bun Logo, which is hyperlinked to the main product page. -->
+    <header>
+      <a href="./index.html">
+        <img src="../assets/logo/logo-01.svg" alt="Bun Bun Logo" class="logo" width="400"/>
+      </a>
+  
+<!-- The header logo and navigation (which is in the header) are separated by the horizontal rule element -->
+      <hr class="hr_header">
+
+<!-- At the top of each page is the navigation bar which contains the Product tab and Cart Tab. Both are linked to their respective html pages. --> 
+      <nav class="header">
+        <p><a href="./index.html" class="headerlink">PRODUCTS</a></p>
+        <p class="header_highlight"><a href="./cart.html" class="headerlink">CART</a></p>
+      </nav>
+    </header>
+
+ <!-- This main section contains the information about what is in a users shopping cart. It has two pretend items that would be in the cart. --> 
+    <main> 
+      <section id="cart_content">
+
+ <!-- Each item in the shopping cart contains the image of the item, the opportunity to remove it from the cart, and a product description including the glazing and amount chosen. --> 
+          <div>
+            <h1> Shopping Cart</h1>
+              <div>
+                <figure>
+                <img src="../assets/products/original-cinnamon-roll.jpg" class="img_border_cart"/>
+                <p class="remove">Remove</p>
+                </figure>
+
+                <p> Original Cinnamon Roll <br>
+                    Glazing: Keep original <br>
+                    Pack Size: 1 <br>
+                    $ 2.49
+                </p>
+              </div>
+
+ <!-- Each item in the shopping cart contains the image of the item, the opportunity to remove it from the cart, and a product description including the glazing and amount chosen. The amount chosen is a summation of the amount of buns-->  
+              <div>
+                <figure>
+                <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" class="img_border_cart"/>
+                <p class="remove">Remove</p>
+                </figure>
+
+                <p> Double Chocolate Cinnamon Roll <br>
+                    Glazing: Sugar milk <br>
+                    Pack Size: 6 <br>
+                    $ 27.45
+                </p>
+              </div>
+
+              <hr>
+
+ <!-- This div container holds the checkout button which shows the user the summation of the items in their cart and the ability to checkout with a button. --> 
+              <div id="checkout">
+                <p class="totalprice"> Total: $ 29.94</p>
+                <button class="checkoutbutton">Checkout</button>
+              </div>
+
+          </div>
+
+      </section>
+  </main>
+
+</body>
+</html>

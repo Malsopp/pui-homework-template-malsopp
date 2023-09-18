@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mikayla Alsopp">
+    <title>Bun Bun Bake Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+
+    <!-- This is the header which is at the top of the page. It includes the Bun Bun Logo, which is hyperlinked to the main product page. -->
+    <header>
+      <a href="./index.html">
+        <img src="../assets/logo/logo-01.svg" alt="Bun Bun Logo" class="logo" width="400"/>
+      </a>
+
+    <!-- The header logo and navigation (which is in the header) are separated by the horizontal rule element --> 
+      <hr class="hr_header">
+    
+    <!-- At the top of each page is the navigation bar which contains the Product tab and Cart Tab. Both are linked to their respective html pages. --> 
+      <nav class="header">
+        <p class="header_highlight"><a href="./index.html" class="headerlink">PRODUCTS</a></p>
+        <p><a href="./cart.html" class="headerlink">CART</a></p>
+      </nav>
+    </header>
+
+    <!-- This main section contains the content with the specific details for the cinammon roll selected (which in this case is the original) --> 
+    <main> 
+      <section id="detail_content">
+
+    <!-- This image is of the original cinammon roll and it has a paragraph encoraging peaople to customize their treat--> 
+          <div>
+            <h1> Original Cinnamon Roll</h1>
+            <img src="../assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll" class="img_border_detail" width="600" />
+            <p id="customize_caption">Customize our delicious, hand-made cinammon roll to your liking! </p>
+
+            <br>
+
+    <!-- This groups the two different types of customizations of the cinammon roll: glazing and packing size. --> 
+            <div id="customizations">
+
+    <!-- This group includes a title and drop down menu for the glazing options, allowing users to select which one they want--> 
+              <div id="glazing_customization"> 
+                <label for="glazing"> Glazing: </label>
+                <br>
+                <select name="Glazing" id="Glazing">
+                  <option value="Keep original">Keep original</option>
+                  <option value="Sugar milk">Sugar milk</option>
+                  <option value="Vanilla milk">Vanilla milk</option>
+                  <option value="Double chocolate">Double chocolate</option>
+                </select>
+              </div>  
+            
+            <br>
+    <!-- This group includes a title and drop down menu for the packing size options, allowing users to choose how many they want--> 
+            <div id="packing_customization">
+                <label for="packSize"> Pack size: </label>
+                <br>
+                <select name="packSize" id="packSize">
+                  <option value="1">1</option>
+                  <option value="3">3</option>
+                  <option value="6">6</option>
+                  <option value="12">12</option>
+                </select>
+            </div>
+      
+    <!-- This codes the button for adding to cart and eventually summating the price of the cinammon buns once it is pressed and the pack size is selected. --> 
+            <p class="indvPrice"> $2.49  <button class="addtoCart">  Add to Cart</button> </p>
+
+            </div>
+          </div>
+
+      </section>
+  </main>
+
+</body>
+</html>
+
