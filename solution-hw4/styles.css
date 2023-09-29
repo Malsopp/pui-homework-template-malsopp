@@ -1,0 +1,310 @@
+/* This is the overall font for the entire body of the website */
+body {
+    font-family: sans-serif;
+}
+
+/* This formats the link of the content formatted with anchor elements. */ 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* This formats the font of the main headers on each page */
+h1 {
+    font-weight: normal;
+}
+
+/* This formats the logo and navigation header at the top of each page. It is the overall parent container and holds the logo, links, hr, and header 1.*/
+.logoandnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+/* For the logo image, the flex-shrink value of 0 will prevent the element from not shrinking if the page is changed. */
+.logocolumn{
+    flex-shrink:0;
+}
+
+/* This formats the width of the Bun Bun Bake Shop logo. */ 
+.logo {
+    width: 400px;
+    max-width: 100%;
+    flex-grow:0;
+}
+
+/* This is the parent container holding the child elements of the Products and Cart links. */
+.navcolumn{
+    flex-grow: 1;
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+ /* This provides a 20px bottom margin at the bottom of the navigation column and the Products and Cart header. */
+.navcolumn .productsandCart {
+    margin-bottom: 20px; 
+  }
+
+/* This provides a parent container holder both the Product and Cart Link. */
+.productsandCart{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Add padding around each word */
+.productsandCart p {
+    padding: 0 50px; 
+  }
+
+/* This formats the header on the page consisting of the products and cart link */ 
+.header {
+    border-top: 1px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* This formats the title at the top of each page. */
+.title{
+    text-align: left;
+    padding: 30px 0;
+}
+
+/* This creates a parent flex box around the first 3 items on the Details page */
+.rowone{
+    display: flex;
+}
+
+/* This creates a parent flex box around the first 3 items on the Details page */
+.rowtwo{
+    display: flex;
+}
+
+
+/* This formats the horizontal rule on the HTML page used to separate the logo from the header */ 
+hr {
+    border: solid 2px;
+}
+
+/* This allows for the specfic "product" or "cart" at the top of the header to be highlighted depending on the page */ 
+#header_highlight {
+    display: inline-block;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* This formats the shared styling of the "product" and "cart" links at the top of the page */ 
+.headerlink {
+    text-decoration: none;
+    padding: 40px;
+    font-size: x-large;
+}
+
+/* This pads and separates each individual menu item on the Product Display page.*/ 
+.listing {
+    padding: 10px 10px 10px 10px;
+    margin:30px;
+}
+
+/* When the cursor is over a specific item on the Product Display page, this causes the product to highlight in yellow*/ 
+.listing:hover {
+    background-color: yellow;
+}
+
+/* This formats the border of the products images on the Display page */ 
+.img_border_product {
+    width: 285px;
+    border: solid 3px;
+    border-color: black;
+}
+
+/* This formats the border of the products images on the Detail page */ 
+.img_border_detail {
+    display: inline-block;
+    width: 600px;
+    border: solid 3px;
+    border-color: black;
+    margin-left: 60px;
+}
+
+/* This formats the border of the products images on the Cart page */ 
+.img_border_cart {
+    width: 200px;
+    border: solid 3px;
+    border-color: black;
+}
+
+/* This formats the description of the cinnamon rolls on the Display page. */
+.product_description {
+    text-align: left;
+    text-decoration: underline;
+    font-size: large;
+}
+
+/* This formats the script of the product description when the cursor is placed over it */
+.product_description:hover {
+    font-weight: bold;
+}
+
+/* This formats the script of the price of the products on the Display page.*/
+.price {
+    font-weight: normal;
+    font-size: large; 
+    text-decoration: none;
+    text-align: left;
+}
+
+/* This formats the script of the remove button on the Carts page.*/
+.remove{
+    font-size: smaller;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1px;
+    text-align: left;
+}
+
+/* This formats the content of all the information in the main section of the Product Details page.*/
+#detail_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    width:1000px;
+}
+
+/* This formats the content of all the information in the main section of the Product page.*/
+#product_content {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* This formats the customization caption of the image on the Details page. It aligns with the image*/
+#customize_caption {
+    width: 300px;
+    text-align: left;
+    display: block;
+    font-size:x-large;
+}
+
+/* This formats the content of the grouped div of the glazing and packing customizations on the details page*/
+#customizations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start; 
+    margin-left: 50px;
+    margin-right: auto;
+    font-size: x-large;
+    width: 300px;
+    height: 600px;
+}
+
+/* This formats the drop-down menu of the customizations on the Details page */
+select {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    font-size: x-large;
+}
+
+/* This formats the addtoCart button at the bottom of the Details page */
+.addtoCart{
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    margin-left: 20px;
+    border: solid 2px;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* This formats the content of the checkout on the Cart page by providing padding to the final element on the page. */
+.totalprice{
+    font-size: x-large;
+    padding: 20px;
+}
+
+/* This formats the parent element for all the information, exclusing the header, and checkout button on the Carts page. */
+#cart_content{
+    margin-left: 385px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* This creates a parent div container for all the elements in the cart for a specific product, containing their image, text, and price. */
+.item_cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* This formats the child div of the description for the product information on the Cart page. */
+.cart_description{
+    font-size: x-large;
+    width: 400px;
+
+}
+
+/* This formats the text content of the description for the product information on the Cart page. */
+.cart_description_text{
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* This formats the child div of the overall item in the cart, specifically the price. */
+.cart_price{
+    font-size: x-large;
+    width: 85px;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+/* This formats the text of the price for each individual item in the cart. */
+.cart_price_text{
+    text-align: right;
+}
+
+/* This formats the content of the checkout div on the Cart page*/
+#checkout{
+    display: flex;
+    font-size: x-large;
+    margin-left: 385px;
+    justify-content: flex-end;
+}
+
+/* This sets a right margin of 370px, which creates a space to the right of the element. */
+.total{
+    margin-right: 370px;
+}
+
+/* This edits the numerical value at the end of the Carts page */
+.numerical{
+    margin-right: 30px;
+    width: 100px;
+    display: inline-block; 
+}
+
+/* This creates a parent container for the checkout button */
+.checkoutbutton_container{
+    display: flex;
+    width: auto;
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+
+/* This formats the button for Checking out */
+.checkoutbutton{
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    border: solid 2px;
+    background-color: yellow;
+    font-weight: bold;
+}
