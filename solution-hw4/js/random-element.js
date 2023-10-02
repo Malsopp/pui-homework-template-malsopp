@@ -10,8 +10,8 @@ let glazing = {
 let packing = {
     "1": 1,
     "3": 3,
-    "6": 6,
-    "12": 12,
+    "6": 5,
+    "12": 10,
 };
 
 // selecting glazing drop down menu
@@ -67,15 +67,34 @@ function updatePackSize() {
     updateTotalPrice();
 }
 
-
-let cart = [];
-
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
+let cart = [];
 
 let header1 = document.querySelector("h1");
 let rollName = rolls[rollType].name;
+let rollPrice = rolls[rollType].basePrice;
+let rollImg = rolls[rollType].imageFile;
 header1.textContent = rollName;
 
+document.querySelector(".indvPrice").textContent = "$" + rollPrice;
+document.querySelector("#detailImg").src = "../assets/products/" + rollImg;
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+function addToCartClicked() {
+    var rollGlazing = selectglazing.options[selectglazing.selectedIndex].text;
+    var packSize = selectpacksize.options[selectpacksize.selectedIndex].text;
+    const rollInstance = new Roll(rollType, rollGlazing, packSize, rollPrice);
+    cart.push(rollInstance);
+    console.log(cart);
+}
