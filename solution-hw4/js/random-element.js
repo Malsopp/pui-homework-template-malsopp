@@ -47,8 +47,10 @@ let basePrice = 2.49;
 selectglazing.addEventListener ("change",updateGlazing);
 selectpacksize.addEventListener ("change",updatePackSize);
 
+// select the individual price 
 let currentPrice = document.getElementsByClassName ("indvPrice")
 
+// update the total price of the items with the pack size and glazing updated
 function updateTotalPrice() {
     let totalPrice = ((basePrice + glazingPrice) * packPrice);
     let roundedTotalPrice = totalPrice.toFixed(2);
@@ -57,11 +59,13 @@ function updateTotalPrice() {
     }
 }
 
+// update glazing price variable
 function updateGlazing() {
     glazingPrice = parseFloat(selectglazing.value);
     updateTotalPrice();
 }
 
+// update pack size price
 function updatePackSize() {
     packPrice = parseFloat(selectpacksize.value);
     updateTotalPrice();
@@ -73,14 +77,18 @@ const rollType = params.get("roll");
 
 let cart = [];
 
+//how to identify each individual item's name, base price, and image
 let header1 = document.querySelector("h1");
 let rollName = rolls[rollType].name;
 let rollPrice = rolls[rollType].basePrice;
 let rollImg = rolls[rollType].imageFile;
 header1.textContent = rollName;
 
+
+//how to identify each individual's price and image 
 document.querySelector(".indvPrice").textContent = "$" + rollPrice;
 document.querySelector("#detailImg").src = "../assets/products/" + rollImg;
+
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -91,6 +99,7 @@ class Roll {
     }
 }
 
+// add items with customizations to console
 function addToCartClicked() {
     var rollGlazing = selectglazing.options[selectglazing.selectedIndex].text;
     var packSize = selectpacksize.options[selectpacksize.selectedIndex].text;
