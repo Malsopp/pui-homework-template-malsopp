@@ -101,6 +101,7 @@ class Roll {
 
 // add items with customizations to console
 function addToCartClicked() {
+    // source for lines 105 & 106 https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
     var rollGlazing = selectglazing.options[selectglazing.selectedIndex].text;
     var packSize = selectpacksize.options[selectpacksize.selectedIndex].text;
     const rollInstance = new Roll(rollType, rollGlazing, packSize, rollPrice);
