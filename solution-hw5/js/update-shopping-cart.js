@@ -35,7 +35,7 @@ function addToCartDOM(rollInstance) {
     let cartList = document.querySelector('#cart_list');
     cartList.appendChild(rollInstance.element);
 
-    rollInstance.element.querySelector("#checkoutbutton").addEventListener("click", () => {removeCartItem(rollInstance)});
+  //  rollInstance.element.querySelector("#checkoutbutton").addEventListener("click", () => {removeCartItem(rollInstance)});
 }    
 
 
@@ -63,6 +63,16 @@ let packing = {
 function itemPrice(rollInstance) {
     let itemPrice = ((rollInstance.basePrice + glazing[rollInstance.glazing]) * packing[rollInstance.size]);
     return itemPrice;
+}
+
+function updateTotalPrice (){
+    let totalPrice = 0
+    for (const Roll of cart){
+        totalPrice += roll.totalPrice;
+    }
+
+    totalPriceDisplay = document.querySelector(".numerical");
+    totalPriceDisplay.textContent = "$" + updateTotalPrice().toFixed(2);
 }
 
 // Add the Rolls to the cart DOM
