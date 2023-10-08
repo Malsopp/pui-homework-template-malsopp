@@ -1,9 +1,32 @@
+// dictionary for glazing information
+let glazing = {
+    "Original": 0,
+    "Sugar milk": 0,
+    "Vanilla milk": 0.5,
+    "Double chocolate": 1.50,
+};
+
+// dictionary for packing information
+let packing = {
+    "1": 1,
+    "3": 3,
+    "6": 5,
+    "12": 10,
+};
+
+function itemPrice(basePrice,rollGlazing,packSize) {
+    let itemPrice = ((basePrice + glazing[rollGlazing]) * packing[packSize]);
+    return itemPrice;
+}
+
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
+        this.itemPrice = itemPrice(basePrice, rollGlazing, packSize);
+
     }
 }
 
@@ -30,50 +53,31 @@ function addToCartDOM(rollInstance) {
                       "Pack size: " + rollInstance.size;
     
     let cartPrice = rollInstance.element.querySelector ('.cart_price_text');
-    cartPrice.innerHTML = "$" + itemPrice(rollInstance).toFixed(2);
+    cartPrice.innerHTML = "$" + rollInstance.itemPrice.toFixed(2);
 
     let cartList = document.querySelector('#cart_list');
     cartList.appendChild(rollInstance.element);
 
-  //  rollInstance.element.querySelector("#checkoutbutton").addEventListener("click", () => {removeCartItem(rollInstance)});
+    rollInstance.element.querySelector(".remove").addEventListener("click", () => {removeCartItem(rollInstance)});
 }    
-
 
 function removeCartItem (rollInstance){
     rollInstance.element.remove();
+    // this code removes the roll & all of its attributes from the array
     cart.delete(rollInstance);
-}
-
-// dictionary for glazing information
-let glazing = {
-    "Original": 0,
-    "Sugar milk": 0,
-    "Vanilla milk": 0.5,
-    "Double chocolate": 1.50,
-};
-
-// dictionary for packing information
-let packing = {
-    "1": 1,
-    "3": 3,
-    "6": 5,
-    "12": 10,
-};
-
-function itemPrice(rollInstance) {
-    let itemPrice = ((rollInstance.basePrice + glazing[rollInstance.glazing]) * packing[rollInstance.size]);
-    return itemPrice;
+    totalPriceDisplay.textContent = "$" + updateTotalPrice().toFixed(2);
 }
 
 function updateTotalPrice (){
-    let totalPrice = 0
-    for (const Roll of cart){
-        totalPrice += roll.totalPrice;
+    let totalPrice = 0;
+    for (const roll of cart){
+        totalPrice += roll.itemPrice;
     }
-
-    totalPriceDisplay = document.querySelector(".numerical");
-    totalPriceDisplay.textContent = "$" + updateTotalPrice().toFixed(2);
+    return totalPrice;
 }
+
+totalPriceDisplay = document.querySelector(".numerical");
+totalPriceDisplay.textContent = "$" + updateTotalPrice().toFixed(2);
 
 // Add the Rolls to the cart DOM
 for (const roll of cart) {
