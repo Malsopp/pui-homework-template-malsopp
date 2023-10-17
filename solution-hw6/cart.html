@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mikayla Alsopp">
+    <title>Bun Bun Bake Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+      <script src="js/rolls.js" defer></script>
+      <script src="js/update-shopping-cart.js" defer></script>
+  <body>
+
+    <!-- This code creates a navigation header for the page! When clicking on tthe Bun Bun Logo, users are directed to the Details page.--> 
+
+    <header>
+      <div class="logoandnav">
+  
+        <div class="logocolumn">
+            <a href="./index.html">
+              <img src="../assets/logo/logo-01.svg" alt="Bun Bun Logo" class="logo" width="400"/>
+            </a>
+        </div>
+  
+      <!-- At the top of each page is the navigation bar which contains the Product tab and Cart Tab. Both are linked to their respective html pages. --> 
+        <div class="navcolumn">
+  
+          <div class="productsandCart"> 
+            <nav class="header">
+              <div class= "headerlink"><a href="./index.html">PRODUCTS</a></div>
+              <div class= "headerlink"><a href="./cart.html" id="header_highlight">CART</a></div>
+            </nav>
+          </div>
+  
+    <!-- The header logo and navigation (which is in the header) are separated by the horizontal rule element --> 
+            <hr class="hr_header">
+          
+    <!-- The header title is included under the horizontal rule element in a large font. --> 
+          <div class="title">
+              <h1> Shopping Cart</h1>
+          </div>
+  
+        </div>
+  
+      </div>
+      </header>
+
+ <!-- This main section contains the information about what is in a users shopping cart. It has two pretend items that would be in the cart. --> 
+    <main> 
+      <section>
+
+ <!-- Each item in the shopping cart contains the image of the item, the opportunity to remove it from the cart, and a product description including the glazing and amount chosen. --> 
+          <div id="cart_content">
+
+            <div id="cart_list">
+              <template class="item_cart">
+                <div class="item">
+                <div class="img_cart">
+                    <figure>
+                    <img src="../assets/products/original-cinnamon-roll.jpg" class= "img_border_cart" width="200px"/>
+                    <p class="remove">Remove</p>
+                    </figure>
+                </div>
+
+                <div class="cart_description">
+                  <p class="cart_description_text"> Description </p>
+                </div>
+
+                <div class="cart_price">
+                <p class="cart_price_text"> $ 2.49 </p>   
+                </div>
+                </div>
+              </template>
+
+            </div>
+
+            <div class="cart_hr"> <hr> </div>
+
+ <!-- This div container shows the user the summation of the items in their cart and the ability to checkout with a button. --> 
+              <div id="checkout">
+                <p class="total"> Total </p>
+                <p class="numerical"> $ 29.94</p>
+              </div>
+
+          </div>
+ <!-- This div container holds the checkout button which shows the user the summation of the items in their cart and the ability to checkout with a button. --> 
+
+          <div class="checkoutbutton_container"> 
+            <button id="checkoutbutton">Checkout</button>
+          </div>
+
+      </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mikayla Alsopp">
+    <title>Bun Bun Bake Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+    <script src="js/rolls.js" defer></script>
+    <script src="js/random-element.js" defer></script>
+  <body>
+
+    <!-- This code creates a navigation header for the page! When clicking on tthe Bun Bun Logo, users are directed to the Details page.--> 
+
+    <header>
+      <div class="logoandnav">
+  
+        <div class="logocolumn">
+            <a href="./index.html">
+              <img src="../assets/logo/logo-01.svg" alt="Bun Bun Logo" class="logo" width="400"/>
+            </a>
+        </div>
+  
+    <!-- At the top of each page is the navigation bar which contains the Product tab and Cart Tab. Both are linked to their respective html pages. --> 
+        <div class="navcolumn">
+  
+          <div class="productsandCart"> 
+            <nav class="header">
+              <div class= "headerlink"><a href="./index.html" id="header_highlight">PRODUCTS</a></div>
+              <div class= "headerlink"><a href="./cart.html">CART</a></div>
+            </nav>
+          </div>
+  
+    <!-- The header logo and navigation (which is in the header) are separated by the horizontal rule element --> 
+            <hr class="hr_header">
+          
+    
+    <!-- The header title is included under the horizontal rule element in a large font. --> 
+
+          <div class="title">
+              <h1> </h1>
+          </div>
+  
+        </div>
+  
+      </div>
+      </header>
+
+    <!-- This main section contains the content with the specific details for the cinammon roll selected (which in this case is the original) --> 
+    <main> 
+      <section>
+
+    <!-- This image is of the original cinammon roll and it has a paragraph encoraging peaople to customize their treat--> 
+      <div id="detail_content">
+            <img src="../assets/products/original-cinnamon-roll.jpg" id="detailImg" alt="original-cinnamon-roll" class="img_border_detail" width="600" />
+
+    <!-- This groups the two different types of customizations of the cinammon roll: glazing and packing size. --> 
+        <div id="customizations">
+
+            <p id="customize_caption">Customize our delicious, hand-made cinammon roll to your liking!</p>
+    <!-- This group includes a title and drop down menu for the glazing options, allowing users to select which one they want--> 
+            <div id="glazing_customization"> 
+                <label for="Glazing"> Glazing: </label>
+                <br>
+                <select name="Glazing" id="Glazing" onchange="updateGlazing(event)"></select>
+            </div>  
+            
+    <!-- This group includes a title and drop down menu for the packing size options, allowing users to choose how many they want--> 
+            <div id="packing_customization">
+                <label for="packSize"> Pack size: </label>
+                <br>
+                <select name="packSize" id="packSize" onchange="updatePackSize(event)"></select>
+            </div>
+      
+    <!-- This codes the button for adding to cart and eventually summating the price of the cinammon buns once it is pressed and the pack size is selected. --> 
+            
+            <div id="detailsPrice">
+              <p class="indvPrice"> $2.49</p>
+              <button onclick="addToCartClicked()" class="addtoCart">  Add to Cart</button>
+            </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
+
