@@ -16,7 +16,10 @@ let packing = {
 
 //return the individual item price for each item in the cart
 function itemPrice(basePrice,rollGlazing,packSize) {
-    let itemPrice = ((basePrice + glazing[rollGlazing]) * packing[packSize]);
+    //let itemPrice = ((basePrice + glazing[rollGlazing]) * packing[packSize]);
+    let glazingPrice = glazing[rollGlazing] || 0;  // Use 0 if rollGlazing is not found
+    let packingPrice = packing[packSize] || 0;  // Use 0 if packSize is not found
+    let itemPrice = ((basePrice + glazingPrice) * packingPrice);
     return itemPrice;
 }
 
@@ -79,6 +82,7 @@ function removeCartItem (rollInstance){
     cart.pop(rollInstance);
     totalPriceDisplay.textContent = "$" + updateTotalPrice().toFixed(2);
 
+    //make the cart array that was stored in the JSON into a string and print it to the console
     const cartArrayString = JSON.stringify(cart);
     localStorage.setItem("cart", cartArrayString);
     console.log(cart); 

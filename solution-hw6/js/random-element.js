@@ -43,7 +43,7 @@ for (const key in packing) {
 // base price for the items when they are unedited and allow to compute new values
 let glazingPrice = 0.0;
 let packPrice = 1;
-let basePrice = 2.49;
+let basePrice = 0.0;
 
 // create Event Listeners whenever the drop dopwn menus are selected
 selectglazing.addEventListener ("change",updateGlazing);
@@ -79,6 +79,7 @@ function updatePackSize() {
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
+basePrice = rolls[rollType].basePrice;
 
 
 //how to identify each individual item's name, base price, and image
@@ -123,6 +124,7 @@ function addToCartClicked() {
     const rollInstance = new Roll(rollType, rollGlazing, packSize, rollPrice);
     cart.push(rollInstance);
 
+    //create a string out of the array string that was stored in JSON
     const cartArrayString = JSON.stringify(cart);
     localStorage.setItem("cart", cartArrayString);
     console.log(cart); 
