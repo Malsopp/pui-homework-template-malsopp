@@ -1,0 +1,108 @@
+.logocolumn {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-right: 20px;
+}
+
+.headerPhoto {
+    height: 200px;
+    width: 400px;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    column-gap: 100px;
+}
+
+.homepageMain {
+    display: flex;
+    column-gap: 100px;
+}
+
+.dailyPlanHeader{
+    display: flex;
+}
+
+.workoutPlan {
+    display: flex;
+    column-gap: 100px;
+}
+
+.indvWorkoutDayTitle {
+    text-align: center;
+}
+
+.workoutBreakdown {
+    display: flex;
+}
+
+/* mouse over link */
+li:hover {
+    color: red;
+  }
+  
+  /* selected link */
+li:active {
+    color: yellow;
+  }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-container {
+    flex: 1;
+    align-items: flex-start;
+    column-gap: 20px;
+}
+
+#videoElement {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 100%;
+    height: auto;
+}
+
+.description-container {
+    flex: 1;
+    padding: 0 20px; /* Add padding as needed */
+}
+
+#descriptionList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#descriptionList li {
+    margin-bottom: 10px;
+}
+
+#completionModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+#completionModal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    text-align: center;
+}
+

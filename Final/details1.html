@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscles By Mikayla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logocolumn">
+            <a href= "homepage.html">
+                <img src="./assets/logo.png" alt="MusclesByMikaylaLogo" class="logo" width="400"/>
+            </a>
+                <img src="./assets/header.jpg" alt="headerPhoto" class="headerPhoto" width="2480"/>
+        </div>
+
+        <hr>
+
+        <div class="dailyPlanHeader">
+            <h1>3-Day Plan</h1>
+            <p>For the hustlers who conquer life's challenges while squeezing in some gym time. This plan packs a punch in just 3 days, giving you maximum gains with minimal fuss. </p>
+        </div>
+
+        <hr>
+
+        <main class="workoutPlan">
+            
+            <div class="indvWorkoutDay"> 
+
+                <div class="indvWorkoutDayTitle"> 
+                    <h2>Day 1</h2>
+                    <p>Full Body Workout: <br> Strength Training</p>
+                </div>
+
+                <hr> 
+
+                <div class="workoutBreakdown">
+                    <div class="exercise">
+                        <ul id="exerciseList">
+                            <li data-video="backSquats">Back Squats</li> 
+                            <li data-video="benchPress">Bench Press</li>
+                            <li data-video="bentOverRow">Bent Over Rows</li>
+                            <li data-video="overheadPress">Overhead Press</li>
+                            <li data-video="plank">Plank</li>
+                          </ul>  
+                    </div>
+
+                    <div class="repsAndSets">
+                        <ul>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>3 sets by 10-12 reps</li>
+                            <li>3 sets by 10-12 reps</li>
+                            <li>3 sets x 30-60 seconds</li>
+                          </ul>  
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+            <div class="indvWorkoutDay"> 
+
+                <div class="indvWorkoutDayTitle"> 
+                    <h2>Day 2</h2>
+                    <p>Full Body Workout: <br> Strength Training</p>
+                </div>
+
+                <hr> 
+
+                <div class="workoutBreakdown">
+                    <div class="exercise">
+                        <ul id="exerciseList">
+                            <li>Deadlifts</li> 
+                            <li>Lat Pulldowns</li>
+                            <li>Lunges</li>
+                            <li>Push-Ups</li>
+                            <li>Russian Twists</li>
+                          </ul>  
+                    </div>
+
+                    <div class="repsAndSets">
+                        <ul>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>3 sets by 10-12 reps per leg</li>
+                            <li>3 sets of max reps</li>
+                            <li>3 sets x 20 reps on each side</li>
+                          </ul>  
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="indvWorkoutDay"> 
+
+                <div class="indvWorkoutDayTitle"> 
+                    <h2>Day 3</h2>
+                    <p>Full Body Workout: <br> Strength Training</p>
+                </div>
+
+                <hr> 
+
+                <div class="workoutBreakdown">
+                    <div class="exercise">
+                        <ul id="exerciseList">
+                            <li>Goblet Squats</li> 
+                            <li>Incline Bench Press</li>
+                            <li>Seated Row Machine</li>
+                            <li>Lateral Raises</li>
+                            <li>Plank</li>
+                          </ul>  
+                    </div>
+
+                    <div class="repsAndSets">
+                        <ul>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>4 sets by 8-10 reps</li>
+                            <li>3 sets by 10-12 reps</li>
+                            <li>3 sets by 12-15 reps</li>
+                            <li>3 sets x 30-60 seconds</li>
+                          </ul>  
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+            <div id="workoutModal" class="modal">
+                <div class="modal-content flex-container">
+                    <div class="video-container">
+                        <video id="videoElement" controls></video>
+                    </div>
+                    <div class="description-container">
+                        <ul id="descriptionList"></ul>
+                    </div>
+                    <span class="close" onclick="closeWorkoutModal()">&times;</span>
+                </div>
+            </div>
+
+            <div id="completionModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeCompletionModal()">&times;</span>
+                    <p>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles with Mikayla!</p>
+                    <img src="./assets/logo.png" alt="MusclesByMikaylaLogo" class="completionModallogo" width="300"/>
+                </div>
+            </div>
+
+    </header>
+
+    
