@@ -64,75 +64,12 @@ function checkCompletion() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
     if (allChecked) {
-        // Show the completion message modal
-        openCompletionModal();
+      // Show the completion modal after 5 seconds (adjust the time as needed)
+        setTimeout(() => {
+            openCompletionModal();
+            }, 7000); // 7000 milliseconds = 7 seconds
     }
 }
-
-let exerciseDictionary = {
-    backSquats: {
-        video: "./assets/BackSquat.mp4",
-        instructions: [
-            `
-            Back Squat: \n
-            - Start with feet shoulder-width apart, barbell resting on your upper back. \n
-            - Keep your chest up and core engaged as you lower your hips back and down. \n
-            - Descend until your thighs are parallel to the ground. \n
-            - Drive through your heels to stand back up, extending hips and knees.
-            `
-        ]
-    },
-    benchPress: {
-        video: "./assets/Bench Press.mp4",
-        instructions: [
-            `
-            Bench Press:
-            - Lie on your back on a flat bench, eyes under the bar.
-            - Grip the bar slightly wider than shoulder-width apart.
-            - Lower the bar to your chest, keeping elbows at a 90-degree angle.
-            - Press the bar back up to the starting position, arms fully extended.
-            `
-        ]
-    },
-    overheadPress: {
-        video: "./assets/Overhead Press.mp4",
-        instructions: [
-            `
-            Overhead Press: \n
-            Stand with feet hip-width apart, barbell at collarbone level. \n
-            - Grip the bar with hands just wider than shoulder-width.\n
-            - Press the bar overhead, fully extending arms. \n
-            - Keep core tight and avoid arching your back.
-            `
-        ]
-    },
-
-    bentOverRow: {
-        video: "./assets/Bent over row.mp4",
-        instructions: [
-            `
-            Bent Over Row:
-            Stand with feet shoulder-width apart, holding a barbell or dumbbells in front of you.
-            Hinge at your hips, keeping your back straight and chest up.
-            Pull the weight toward your lower chest, squeezing your shoulder blades together.
-            Lower the weight back down with control.
-            `
-        ]
-    },
-
-    plank: {
-        video: "./assets/Plank.mp4",
-        instructions: [
-            `
-            Plank: 
-            Start in a push-up position with arms straight and shoulders over wrists.
-            Engage your core, keeping your body in a straight line from head to heels.
-            Hold the position, avoiding sagging hips or raised buttocks.
-            Aim to maintain a strong plank form for the desired duration.
-            `
-        ]
-    }
-};
 
 
 // Get the exercise list element and video element
@@ -140,27 +77,35 @@ let exerciseDictionary = {
 const videoElement = document.getElementById('videoElement');
 const descriptionList = document.getElementById('descriptionList'); 
 
-// Add click event listener to the exercise list items
-exerciseList.addEventListener('click', function (event) {
-    const selectedElement = event.target;
+listItems.forEach(listItems => {
+    const checkbox = listItems.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            const videoKey = listItems.dataset.video;
+            
+            if (exerciseDictionary.hasOwnProperty(videoKey)) {
+                const exercise = exerciseDictionary[videoKey];
+                videoElement.style.display = 'block';
+                descriptionList.style.display = 'block';
+                videoElement.src = exercise.video;
+                videoElement.load();
+                videoElement.play();
+                descriptionList.innerHTML = exercise.instructions.map(instruction => `<li>${instruction}</li>`).join('');
 
-    // Check if the selected element is a checkbox or has the data-video attribute
-    if (selectedElement.tagName === 'INPUT' || selectedElement.tagName === 'LABEL' && selectedElement.dataset.video) {
-        const videoKey = selectedElement.dataset.video;
-
-        if (exerciseDictionary.hasOwnProperty(videoKey)) {
-            const exercise = exerciseDictionary[videoKey]; // Store the exercise object
-            // Show the video element
-            videoElement.style.display = 'block';
-            descriptionList.style.display = 'block';
-
-             // Set the video source and play it
-            videoElement.src = exercise.video;
-            videoElement.load();
-            videoElement.play();
-
-            // Update the description with the workout instructions
-            descriptionList.innerHTML = exercise.instructions.map(instruction => `<li>${instruction}</li>`).join('');
+                // Open the workout modal
+                openWorkoutModal();
+            }
+        } else {
+            // Handle the case when the checkbox is unchecked (if needed)
         }
-    }
+    });
 });
+
+
+// Function to open the workout modal
+function openWorkoutModal() {
+    const workoutModal = document.getElementById('workoutModal');
+    const modalContent = document.querySelector('#workoutModal .modal-content');
+    workoutModal.style.display = 'block';
+    modalContent.style.display = 'block';  // Add this line
+}

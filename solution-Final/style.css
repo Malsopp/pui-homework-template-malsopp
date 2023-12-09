@@ -1,3 +1,7 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .logocolumn {
     display: flex;
     width: 100%;
@@ -14,6 +18,7 @@
     height: 200px;
     width: 400px;
     display: block;
+    width: 75%;
 }
 
 .navbar {
@@ -25,6 +30,26 @@
 .homepageMain {
     display: flex;
     column-gap: 100px;
+}
+
+button {
+box-sizing: border-box;
+width: 200px;
+height: 50px;
+background: rgb(255, 234, 0);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 200px;
+
+}
+
+h1 {
+width: 400px;
+height: 75px;
+left: -32px;
+top: 519px;
+background: lightgray;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 0px 200px 200px 0px;
 }
 
 .dailyPlanHeader{
@@ -45,12 +70,12 @@
 }
 
 /* mouse over link */
-li:hover {
+.indvExercise:hover {
     color: red;
   }
   
   /* selected link */
-li:active {
+.indvExercisee:active {
     color: yellow;
   }
 
@@ -85,6 +110,48 @@ li:active {
     margin-bottom: 10px;
 }
 
+#workoutModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width if desired */
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.modal-content {
+    width: 80%; /* Adjust the width as needed */
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.closeExerciseModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeExerciseModal,
+.closeExerciseModal {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 #completionModal {
     display: none;
     position: fixed;
@@ -94,6 +161,7 @@ li:active {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
+    z-index: 2;
 }
 
 #completionModal .modal-content {

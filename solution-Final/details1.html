@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muscles By Mikayla</title>
     <link rel="stylesheet" href="style.css">
+    <script src="dictionary.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -40,11 +45,11 @@
                 <div class="workoutBreakdown">
                     <div class="exercise">
                         <ul id="exerciseList">
-                            <li data-video="backSquats">Back Squats</li> 
-                            <li data-video="benchPress">Bench Press</li>
-                            <li data-video="bentOverRow">Bent Over Rows</li>
-                            <li data-video="overheadPress">Overhead Press</li>
-                            <li data-video="plank">Plank</li>
+                            <li id="indvExercise" data-video="backSquats">Back Squats</li> 
+                            <li id="indvExercise" data-video="benchPress">Bench Press</li>
+                            <li id="indvExercise" data-video="bentOverRow">Bent Over Rows</li>
+                            <li id="indvExercise" data-video="overheadPress">Overhead Press</li>
+                            <li id="indvExercise" data-video="plank">Plank</li>
                           </ul>  
                     </div>
 
@@ -62,7 +67,7 @@
 
             </div>
             
-
+            /Users/mikaylasyannealsopp/Desktop/Fall 2023/PUI/Final/details1.html
             <div class="indvWorkoutDay"> 
 
                 <div class="indvWorkoutDayTitle"> 
@@ -113,7 +118,7 @@
                             <li>Incline Bench Press</li>
                             <li>Seated Row Machine</li>
                             <li>Lateral Raises</li>
-                            <li>Plank</li>
+                            <li data-video="plank">Plank</li>
                           </ul>  
                     </div>
 
@@ -141,14 +146,14 @@
                     <div class="description-container">
                         <ul id="descriptionList"></ul>
                     </div>
-                    <span class="close" onclick="closeWorkoutModal()">&times;</span>
+                    <span class="closeExerciseModal" onclick="closeWorkoutModal()">&times;</span>
                 </div>
             </div>
 
             <div id="completionModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeCompletionModal()">&times;</span>
-                    <p>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles with Mikayla!</p>
+                    <p>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles by Mikayla!</p>
                     <img src="./assets/logo.png" alt="MusclesByMikaylaLogo" class="completionModallogo" width="300"/>
                 </div>
             </div>
