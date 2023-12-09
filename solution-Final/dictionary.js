@@ -1,6 +1,6 @@
 let exerciseDictionary = {
     backSquats: {
-        video: "./assets/BackSquat.mp4",
+        video: "./assets/backSquat.mp4",
         instructions: [
             "<strong>Back Squat:</strong>",
             "<ol>",
@@ -12,7 +12,7 @@ let exerciseDictionary = {
         ]
     },
     benchPress: {
-        video: "./assets/Bench Press.mp4",
+        video: "./assets/benchPress.mp4",
         instructions: [
             `
             Bench Press:
@@ -24,7 +24,7 @@ let exerciseDictionary = {
         ]
     },
     overheadPress: {
-        video: "./assets/Overhead Press.mp4",
+        video: "./assets/overheadPress.mp4",
         instructions: [
             `
             Overhead Press: 
@@ -37,7 +37,7 @@ let exerciseDictionary = {
     },
 
     bentOverRow: {
-        video: "./assets/Bent over row.mp4",
+        video: "./assets/bentOverRow.mp4",
         instructions: [
             `
             Bent Over Row:
@@ -50,7 +50,7 @@ let exerciseDictionary = {
     },
 
     plank: {
-        video: "./assets/Plank.mp4",
+        video: "./assets/plank.mp4",
         instructions: [
             `
             Plank: 
@@ -59,6 +59,140 @@ let exerciseDictionary = {
             Hold the position, avoiding sagging hips or raised buttocks.
             Aim to maintain a strong plank form for the desired duration.
             `
+        ]
+    },
+
+    bicepCurls: {
+        video: "./assets/bicepCurls.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    bulgarianSplitSquat: {
+        video: "./assets/bulgarianSplitSquats.mp4",
+        instructions: [
+         
+        ]
+    },
+
+    chestFlyMachine: {
+        video: "./assets/chestFlyMachine.mp4",
+        instructions: [
+       
+        ]
+    },
+
+    deadlift: {
+        video: "./assets/deadlift.mp4",
+        instructions: [
+        
+            
+        ]
+    },
+
+    gobleSquat: {
+        video: "./assets/gobletSquat.mp4",
+        instructions: [
+       
+        ]
+    },
+
+    hammerCurls: {
+        video: "./assets/hammerCurls.mp4",
+        instructions: [
+       
+        ]
+    },
+
+    hipThrust: {
+        video: "./assets/hipThrust.mp4",
+        instructions: [
+       
+        ]
+    },
+
+    inclineBench: {
+        video: "./assets/inclineBench.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    lateralRaises: {
+        video: "./assets/lateralRaises.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    latPulldown: {
+        video: "./assets/latPulldown.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    legExtension: {
+        video: "./assets/legExtension.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    legPress: {
+        video: "./assets/legPress.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    oneArmRowMachine: {
+        video: "./assets/oneArmRowMachine.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    rdl: {
+        video: "./assets/rdl.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    rearDeltFly: {
+        video: "./assets/rearDeltFly.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    russianTwist: {
+        video: "./assets/russianTwist.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    sumoSquat: {
+        video: "./assets/sumoSquat.mp4",
+        instructions: [
+           
+        ]
+    },
+
+    tricepExtensions: {
+        video: "./assets/tricepExtensions.mp4",
+        instructions: [
+           
+        ]
+    },   
+    
+    seatedLegCurl: {
+        video: "./assets/seatedLegCurl.mp4",
+        instructions: [
+           
         ]
     }
 };

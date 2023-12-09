@@ -1,6 +1,9 @@
 // Get all list items in the exerciseList
-const exerciseList = document.getElementById('exerciseList');
-const listItems = exerciseList.querySelectorAll('li');
+const exerciseList = document.querySelectorAll('.exerciseList');
+
+// Iterate through each exerciseList
+exerciseList.forEach((exerciseList) => {
+    const listItems = exerciseList.querySelectorAll('li');
 
 // Iterate through each list item and add a checkbox
 listItems.forEach((item, index) => {
@@ -45,6 +48,7 @@ listItems.forEach((item, index) => {
             descriptionList.style.display = 'none';
         }
     });
+});
 });
 
 // Function to open the completion modal
@@ -109,3 +113,4 @@ function openWorkoutModal() {
     workoutModal.style.display = 'block';
     modalContent.style.display = 'block';  // Add this line
 }
+
