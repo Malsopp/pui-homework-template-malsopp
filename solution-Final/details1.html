@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muscles By Mikayla</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css"/>
     <script src="dictionary.js" defer></script>
     <script src="script.js" defer></script>
 </head>
@@ -16,16 +17,15 @@
 
     <header>
         <div class="logocolumn">
-            <a href= "homepage.html">
-                <img src="./assets/logo.png" alt="MusclesByMikaylaLogo" class="logo" width="400"/>
+            <a href= "index.html">
+                <img src="./assets/logo3.jpg" alt="MusclesByMikaylaLogo" class="logo" width="400"/>
             </a>
-                <img src="./assets/header.jpg" alt="headerPhoto" class="headerPhoto" width="2480"/>
         </div>
 
         <hr>
 
         <div class="dailyPlanHeader">
-            <h1>3-Day Plan</h1>
+            <h1 class="slide-in-text" id="threeDayTitle">3-Day Plan</h1>
             <p>For the hustlers who conquer life's challenges while squeezing in some gym time. This plan packs a punch in just 3 days, giving you maximum gains with minimal fuss. </p>
         </div>
 
@@ -44,12 +44,12 @@
 
                 <div class="workoutBreakdown">
                     <div class="exercise">
-                        <ul class="exerciseList">
-                            <li id="indvExercise" data-video="backSquat">Back Squats</li> 
-                            <li id="indvExercise" data-video="benchPress">Bench Press</li>
-                            <li id="indvExercise" data-video="bentOverRow">Bent Over Rows</li>
-                            <li id="indvExercise" data-video="overheadPress">Overhead Press</li>
-                            <li id="indvExercise" data-video="plank">Plank</li>
+                        <ul class="exerciseList" id="exerciseListOne">
+                            <li data-video="backSquat" alt="Back Squat">Back Squats</li> 
+                            <li data-video="benchPress" alt="Bench Press">Bench Press</li>
+                            <li data-video="bentOverRow" alt="Bent Over Rows">Bent Over Rows</li>
+                            <li data-video="overheadPress" alt="Overhead Press">Overhead Press</li>
+                            <li data-video="plank" alt="Plank">Plank</li>
                           </ul>  
                     </div>
 
@@ -78,12 +78,12 @@
 
                 <div class="workoutBreakdown">
                     <div class="exercise">
-                        <ul class="exerciseList">
-                            <li data-video="deadlift">Deadlifts</li> 
-                            <li data-video="latPulldown">Lat Pulldowns</li>
-                            <li data-video="bulgarianSplitSquats">Bulgarian Split Squats</li>
-                            <li data-video="bicepCurls">Bicep Curls</li>
-                            <li data-video="russianTwist">Russian Twists</li>
+                        <ul class="exerciseList" id="exerciseListTwo">
+                            <li data-video="deadlift" alt="Deadlift">Deadlifts</li> 
+                            <li data-video="latPulldown" alt="Lat Pulldown">Lat Pulldowns</li>
+                            <li data-video="bulgarianSplitSquats" alt="Bulgarian Split Squats">Bulgarian Split Squats</li>
+                            <li data-video="bicepCurls" alt="Bicep Curls">Bicep Curls</li>
+                            <li data-video="russianTwist" alt="Russian Twists">Russian Twists</li>
                           </ul>  
                     </div>
 
@@ -112,12 +112,12 @@
 
                 <div class="workoutBreakdown">
                     <div class="exercise">
-                        <ul class="exerciseList">
-                            <li data-video="gobletSquat">Goblet Squats</li> 
-                            <li data-video="inclineBench">Incline Bench Press</li>
-                            <li data-video="oneArmRowMachine">Seated Row Machine</li>
-                            <li data-video="lateralRaises">Lateral Raises</li>
-                            <li data-video="plank">Plank</li>
+                        <ul class="exerciseList" id="exerciseListThree">
+                            <li data-video="gobletSquat" alt="Goblet Squats">Goblet Squats</li> 
+                            <li data-video="inclineBench" alt="Incline Bench Press">Incline Bench Press</li>
+                            <li data-video="oneArmRowMachine" alt="Seated Row Machine">Seated Row Machine</li>
+                            <li data-video="lateralRaises" alt="Lateral Raises">Lateral Raises</li>
+                            <li data-video="plank" alt="Plank">Plank</li>
                           </ul>  
                     </div>
 
@@ -137,23 +137,24 @@
 
         </main>
 
-            <div id="workoutModal" class="modal">
-                <div class="modal-content flex-container">
+                <div id="workoutModal" class="modal-content flex-container">
                     <div class="video-container">
                         <video id="videoElement" controls></video>
+                        <button class="closeWorkout">Exit Workout</button>
                     </div>
                     <div class="description-container">
                         <ul id="descriptionList"></ul>
                     </div>
                     <span class="closeExerciseModal" onclick="closeWorkoutModal()">&times;</span>
                 </div>
-            </div>
 
             <div id="completionModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeCompletionModal()">&times;</span>
-                    <p>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles by Mikayla!</p>
+                    <h2>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles by Mikayla!</h2>
                     <img src="./assets/logo.png" alt="MusclesByMikaylaLogo" class="completionModallogo" width="300"/>
+                    <hr>
+                    <a href="index.html"><button>Return to home</button></a>
                 </div>
             </div>
 

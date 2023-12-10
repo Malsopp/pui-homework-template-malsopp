@@ -1,24 +1,15 @@
 body {
     font-family: 'Poppins', sans-serif;
-}
-
-.logocolumn {
-    display: flex;
-    width: 100%;
+    font-weight: 200;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: 0 auto; /* Centers the body horizontally */
 }
 
 .logo {
-    width: 200px;
-    height: auto;
+    width: 1160px;
+    height: 180px;
     display: block;
-    margin-right: 20px;
-}
-
-.headerPhoto {
-    height: 200px;
-    width: 400px;
-    display: block;
-    width: 75%;
 }
 
 .navbar {
@@ -27,6 +18,9 @@ body {
     column-gap: 100px;
 }
 
+main {
+    background-image: url(assets/barbells.jpg);
+}
 .homepageMain {
     display: flex;
     column-gap: 100px;
@@ -39,28 +33,86 @@ height: 50px;
 background: rgb(255, 234, 0);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 200px;
-
+font-family: 'Poppins', sans-serif;
+font-size: larger;
+font-weight: bold;
 }
 
 h1 {
 width: 400px;
-height: 75px;
+height: 70px;
 left: -32px;
 top: 519px;
 background: lightgray;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 0px 200px 200px 0px;
+text-align: center;
+justify-content: center;
+font-size: 40px;
+}
+
+h3 {
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration:underline ;
+}
+
+.introParagraph{
+    background-color: rgba(255, 234, 0);
+    border-radius: 10px;
+}
+
+.introParagraph p{
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+
+.introParagraph h3{
+    margin-left: 10px;
+    margin-right: 10px; 
 }
 
 .dailyPlanHeader{
     display: flex;
+    column-gap: 50px;
+}
+
+.dailyPlanHeader h2{
+    text-decoration: underline;
+}
+
+.dailyPlanHeader p {
+    margin-right: 250px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .workoutPlan {
     display: flex;
-    column-gap: 100px;
+    column-gap: 20px;
+    justify-content: center;
 }
 
+#fourDay.workoutPlan{
+    column-gap: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.indvWorkoutDay{
+    background-color: rgba(255, 234, 0);
+    border-radius: 10px;
+    max-width: 500px;
+
+}
+
+.indvWorkoutFiveDay{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
 .indvWorkoutDayTitle {
     text-align: center;
 }
@@ -84,22 +136,24 @@ border-radius: 0px 200px 200px 0px;
     justify-content: space-between;
 }
 
-.video-container {
+.video-container,.description-container {
     flex: 1;
-    align-items: flex-start;
-    column-gap: 20px;
+    align-items: center;
+}
+
+.video-container video {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 100%;
+    height: 50%; /* Set height to auto to maintain the video's aspect ratio */
 }
 
 #videoElement {
-    width: 70%; /* Adjust the width as needed */
+    display: flex;
+    width:50%; 
     max-width: 100%;
     height: auto;
 }
 
-.description-container {
-    flex: 1;
-    padding: 0 20px; /* Add padding as needed */
-}
 
 #descriptionList {
     list-style-type: none;
@@ -144,14 +198,6 @@ border-radius: 0px 200px 200px 0px;
     font-weight: bold;
 }
 
-.closeExerciseModal,
-.closeExerciseModal {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 #completionModal {
     display: none;
     position: fixed;
@@ -164,7 +210,7 @@ border-radius: 0px 200px 200px 0px;
     z-index: 2;
 }
 
-#completionModal .modal-content {
+#completionModal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -174,3 +220,27 @@ border-radius: 0px 200px 200px 0px;
     text-align: center;
 }
 
+  /* Styles for iPhone 14*/
+@media only screen and (max-width: 375px) {
+    body {
+      font-size: 8px; 
+    }
+  }
+  
+  /* Styles for MacBook Pro 13-inch */
+  @media only screen and (min-width: 1024px) {
+  }
+
+
+  /*Have Title Text Slide In*/
+  .slide-in-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards; /* 1s duration, forwards to keep the final state */
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
