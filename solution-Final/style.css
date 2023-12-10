@@ -3,7 +3,7 @@ body {
     font-weight: 200;
     margin-left: 20px;
     margin-right: 20px;
-    margin: 0 auto; /* Centers the body horizontally */
+    margin: 0 auto; 
 }
 
 .logo {
@@ -121,15 +121,6 @@ h3 {
     display: flex;
 }
 
-/* mouse over link */
-.indvExercise:hover {
-    color: red;
-  }
-  
-  /* selected link */
-.indvExercisee:active {
-    color: yellow;
-  }
 
 .flex-container {
     display: flex;
@@ -153,7 +144,6 @@ h3 {
     max-width: 100%;
     height: auto;
 }
-
 
 #descriptionList {
     list-style-type: none;

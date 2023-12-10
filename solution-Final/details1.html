@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <!--Logo linking to homescreen-->
     <header>
         <div class="logocolumn">
             <a href= "index.html">
@@ -24,6 +25,7 @@
 
         <hr>
 
+        <!--Workout Plan Introduction-->
         <div class="dailyPlanHeader">
             <h1 class="slide-in-text" id="threeDayTitle">3-Day Plan</h1>
             <p>For the hustlers who conquer life's challenges while squeezing in some gym time. This plan packs a punch in just 3 days, giving you maximum gains with minimal fuss. </p>
@@ -32,16 +34,17 @@
         <hr>
 
         <main class="workoutPlan">
-            
+        <!--Container with all workouts-->
             <div class="indvWorkoutDay"> 
 
+            <!--Workout for Day 1-->
                 <div class="indvWorkoutDayTitle"> 
                     <h2>Day 1</h2>
                     <p>Full Body Workout: <br> Strength Training</p>
                 </div>
 
                 <hr> 
-
+                <!--Listed Exercises-->
                 <div class="workoutBreakdown">
                     <div class="exercise">
                         <ul class="exerciseList" id="exerciseListOne">
@@ -52,7 +55,7 @@
                             <li data-video="plank" alt="Plank">Plank</li>
                           </ul>  
                     </div>
-
+                    <!--Corresponding reps and sets for each workout-->
                     <div class="repsAndSets">
                         <ul>
                             <li>4 sets by 8-10 reps</li>
@@ -68,7 +71,7 @@
             </div>
 
             <div class="indvWorkoutDay"> 
-
+                <!--Workout for Day 2-->
                 <div class="indvWorkoutDayTitle"> 
                     <h2>Day 2</h2>
                     <p>Full Body Workout: <br> Strength Training</p>
@@ -136,12 +139,14 @@
             </div>
 
         </main>
-
+                <!--Workout pop-up modal-->
                 <div id="workoutModal" class="modal-content flex-container">
                     <div class="video-container">
+                        <!--Video-->
                         <video id="videoElement" controls></video>
                         <button class="closeWorkout">Exit Workout</button>
                     </div>
+                         <!--Workout description-->
                     <div class="description-container">
                         <ul id="descriptionList"></ul>
                     </div>
@@ -149,6 +154,7 @@
                 </div>
 
             <div id="completionModal" class="modal">
+                <!--Completion modal-->
                 <div class="modal-content">
                     <span class="close" onclick="closeCompletionModal()">&times;</span>
                     <h2>Congratulations on completing today's workout! Can't wait to see you again when you rejoin us to build Muscles by Mikayla!</h2>
